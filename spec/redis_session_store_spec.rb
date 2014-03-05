@@ -22,14 +22,14 @@ describe RedisSessionStore do
   describe 'when initializing with the redis sub-hash options' do
     let :options do
       {
-        key: random_string,
-        secret: random_string,
-        redis: {
-          host: 'hosty.local',
-          port: 16_379,
-          db: 2,
-          key_prefix: 'myapp:session:',
-          expire_after: 60 * 120
+        'key'  => random_string,
+        'secret' => random_string,
+        'redis' => {
+          'host' => 'hosty.local',
+          'port' => 16_379,
+          'db' => 2,
+          'key_prefix' => 'myapp:session:',
+          'expire_after' => 60 * 120
         }
       }
     end
@@ -62,13 +62,13 @@ describe RedisSessionStore do
   describe 'when initializing with top-level redis options' do
     let :options do
       {
-        key: random_string,
-        secret: random_string,
-        host: 'hostersons.local',
-        port: 26_379,
-        db: 4,
-        key_prefix: 'appydoo:session:',
-        expire_after: 60 * 60
+        'key' => random_string,
+        'secret' => random_string,
+        'host' => 'hostersons.local',
+        'port' => 26_379,
+        'db' => 4,
+        'key_prefix' => 'appydoo:session:',
+        'expire_after' => 60 * 60
       }
     end
 

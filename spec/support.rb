@@ -6,13 +6,13 @@ unless defined?(ActionDispatch::Session::AbstractStore)
       class AbstractStore
         ENV_SESSION_OPTIONS_KEY = 'rack.session.options'.freeze
         DEFAULT_OPTIONS = {
-          key: '_session_id',
-          path: '/',
-          domain: nil,
-          expire_after: nil,
-          secure: false,
-          httponly: true,
-          cookie_only: true
+          'key' => '_session_id',
+          'path' => '/',
+          'domain' => nil,
+          'expire_after' => nil,
+          'secure' => false,
+          'httponly' => true,
+          'cookie_only' => true
         }.freeze
 
         def initialize(app, options = {})

@@ -33,7 +33,7 @@ class RedisSessionStore < ActionDispatch::Session::AbstractStore
 
     redis_options = options[:redis] || {}
 
-    @default_options.merge!(namespace: 'rack:session')
+    @default_options.merge!('namespace' => 'rack:session')
     @default_options.merge!(redis_options)
     @redis = Redis.new(redis_options)
     @raise_errors = !!options[:raise_errors]
